@@ -1,5 +1,6 @@
 #!/bin/bash
 # TW_MM build script v0.1
+# <by @aapav01>
 
 BUILD_TOP_DIR=$(pwd)
 BUILD_KERNEL_DIR=$(pwd)
@@ -63,7 +64,16 @@ else
 	VARIANT_DEFCONFIG=msm8226-sec_${MODEL}_${CARRIER}_defconfig
 fi
 
-BUILD_KERNEL_DIR=$(pwd)/kernel/$MODEL/
+if [ "$MODEL" == "ms01lte" ]; then
+	if [ "$REGION" == "eur" ]
+		BUILD_KERNEL_DIR=$(pwd)/kernel/$MODEL/
+	else
+		BUILD_KERNEL_DIR=$(pwd)/kernel/msm8226/
+	fi
+else
+	BUILD_KERNEL_DIR=$(pwd)/kernel/msm8226/
+fi
+
 echo "============================================="
 echo "		Other Spec"
 echo "============================================="
@@ -72,7 +82,7 @@ echo "Kernel         = $BUILD_KERNEL_DIR"
 echo "GCC            = $BUILD_CROSS_COMPILE"
 echo "JOBs           = $BUILD_JOB_NUMBER"
 echo "Out Dir        = $BUILD_TOP_DIR/out"
-echo "ROM            = $BUILD_TOP_DIR/s5_mini_port"
+echo "ROM            = $BUILD_TOP_DIR/s5_port_mm"
 echo "Ramdisk-kernel = $BUILD_TOP_DIR/ramdisk "
 echo "============================================="
 
@@ -243,6 +253,7 @@ SECFUNC_PRINT_HELP()
 	echo "      s3ve3g_eur"
 	echo "      ms013g_eur"
 	echo "      ms01lte_eur"
+	echo "      ms01lte_ktt"
 	echo -e '\E[0m'
 }
 
