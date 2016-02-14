@@ -214,34 +214,6 @@ FUNC_BUILD_KERNEL()
 
 BUILD_KERNEL_RAMDISK_DIR=$BUILD_TOP_DIR/ramdisk
 
-FUNC_EXT_MODULES_TARGET()
-{
-
-	echo ""
-	echo "===================================="
-	echo "  START : FUNC_EXT_MODULES_TARGET"
-	echo "===================================="
-	echo ""
-
-	OUT_MODU=$BUILD_TOP_DIR/out/${MODEL}/system/lib/modules
-	rm -rf $OUT_MODU
-	mkdir -p $OUT_MODU
-	find $BUILD_KERNEL_OUT_DIR -name "*.ko" -exec cp -fv {} $OUT_MODU \;
-
-	mkdir -p $OUT_MODU/pronto
-	echo ""
-	echo "Moving wlan.ko to pronto/pronto_wlan.ko"
-	echo ""
-	mv -vf $OUT_MODU/wlan.ko $OUT_MODU/pronto/pronto_wlan.ko
-
-	echo ""
-	echo "===================================="
-	echo "  END : FUNC_EXT_MODULES_TARGET"
-	echo "===================================="
-	echo ""
-
-}
-
 SECFUNC_PRINT_HELP()
 {
 	echo -e '\E[33m'
@@ -295,7 +267,6 @@ rm -rf ./build.log
 	START_TIME=`date +%s`
 
 	FUNC_BUILD_KERNEL
-	FUNC_EXT_MODULES_TARGET
 
 	cp -vf $INSTALLED_DTIMAGE_TARGET $BUILD_KERNEL_RAMDISK_DIR/dt.img
 	cp -vf $KERNEL_ZIMG $BUILD_KERNEL_RAMDISK_DIR/kernel
