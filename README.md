@@ -11,7 +11,7 @@ To initialize your local repository using the TW-MM-MSM8226 trees, use command :
 
 Then to sync up:
 
-    repo sync
+    repo sync -c --no-tags
 
 
 Supported device
