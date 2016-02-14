@@ -69,14 +69,10 @@ else
 	VARIANT_DEFCONFIG=msm8226-sec_${MODEL}_${CARRIER}_defconfig
 fi
 
-if [ "$MODEL" == "ms01lte" ]; then
-	if [ "$REGION" == "eur" ]
-		BUILD_KERNEL_DIR=$(pwd)/kernel/$MODEL/
-	else
-		BUILD_KERNEL_DIR=$(pwd)/kernel/msm8226/
-	fi
-else
-	BUILD_KERNEL_DIR=$(pwd)/kernel/msm8226/
+BUILD_KERNEL_DIR=$(pwd)/kernel/msm8226/
+
+if [ "${MODEL}_${CARRIER}" == "ms01lte_eur" ]; then
+	BUILD_KERNEL_DIR=$(pwd)/kernel/$MODEL/
 fi
 
 echo "============================================="
