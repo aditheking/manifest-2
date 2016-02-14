@@ -19,7 +19,8 @@ Supported device
 
     ms013g (Grand 2 SM-G7102)
     ms01lte (Grand 2 SM-G7105)
-    s3ve3g  (S3 neo)
+    ms01ltektt (Grand 2 SM-G710K)
+    s3ve3g  (S3 neo GT-I9300I)
  
 
 
