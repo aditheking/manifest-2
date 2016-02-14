@@ -3,7 +3,7 @@
 	<remote  name="github"
            fetch=".." />
 
-	<default revision="refs/heads/tw_mm"
+	<default revision="refs/heads/TW-6.0.1"
            remote="github"
            sync-c="true"
            sync-j="4" />
