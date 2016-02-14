@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 	<remote  name="github"
-           fetch=".." />
+           fetch=".."
+           sync-c="true"
+           sync-j="4" />
+
+	<remote  name="aosp"
+           fetch="https://android.googlesource.com"
+           review="android-review.googlesource.com"
+           revision="refs/tags/android-6.0.1_r13" />
 
 	<default revision="refs/heads/TW-6.0.1"
            remote="github"
@@ -9,12 +16,13 @@
            sync-j="4" />
 
   <project path="manifest" name="TW-MM-msm8226/manifest" />
-    <copyfile src="mm_rom.sh" dest="mm_rom.sh" />
-  <project path="MM_port" name="TW-MM-msm8226/ROM" />
-  <project path="kernel/ms013g" name="TW-LL-msm8226/samsung_ms013g_SWA" />
-  <project path="kernel/ms01lte" name="TW-MM-msm8226/samsung_ms01lte_EUR" />
+    <copyfile src="mm_rom.sh" dest="build_rom.sh" />
+  <project path="s5_port_mm" name="TW-MM-msm8226/ROM" />
+  <project path="kernel/msm8226" name="TW-LL-msm8226/samsung_ms013g_SWA" />
   <project path="tools/mkbootimg" name="xiaolu/mkbootimg_tools" revision="master" />
-  <project path="ramdisk" name="TW-LL-msm8226/ramdisk_kmini3g" />
+  <!--<project path="ramdisk" name="TW-MM-msm8226/ramdisk_klte" />-->
+  <project path="tools/arm-eabi-4.8" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" groups="pdk,linux,arm" remote="aosp" />
+  <project path="tools/mkbootimg" name="xiaolu/mkbootimg_tools" revision="master" remote="github" />
   </project>
 
 </manifest>
