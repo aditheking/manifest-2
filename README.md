@@ -17,6 +17,11 @@ Then to sync up:
 Supported device
 ----------------
 
-ms013g (SM-G7102)
-ms01lte(SM-G7105
+    ms013g
+        
+    ms01lte
+
+
+
+
 
