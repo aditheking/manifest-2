@@ -18,7 +18,7 @@
   <project path="manifest" name="TW-MM-msm8226/manifest" />
     <copyfile src="mm_rom.sh" dest="build_rom.sh" />
   <project path="s5_port_mm" name="TW-MM-msm8226/ROM" />
-  <project path="kernel/msm8226" name="TW-LL-msm8226/samsung_ms013g_SWA" />
+  <project path="kernel/msm8226" name="TW-MM-msm8226/samsung_ms013g_SWA" />
   <project path="tools/mkbootimg" name="xiaolu/mkbootimg_tools" revision="master" />
   <!--<project path="ramdisk" name="TW-MM-msm8226/ramdisk_klte" />-->
   <project path="tools/arm-eabi-4.8" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" groups="pdk,linux,arm" remote="aosp" />
