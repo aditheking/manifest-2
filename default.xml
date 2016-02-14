@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote  name="github"
+           fetch=".." />
+
+	<default revision="refs/heads/tw_mm"
+           remote="github"
+           sync-c="true"
+           sync-j="4" />
+
+  <project path="manifest" name="TW-MM-msm8226/manifest" />
+    <copyfile src="mm_rom.sh" dest="mm_rom.sh" />
+  <project path="MM_port" name="TW-MM-msm8226/ROM" />
+  <project path="kernel/ms013g" name="TW-LL-msm8226/samsung_ms013g_SWA" />
+  <project path="kernel/ms01lte" name="TW-MM-msm8226/samsung_ms01lte_EUR" />
+  <project path="tools/mkbootimg" name="xiaolu/mkbootimg_tools" revision="master" />
+  <project path="ramdisk" name="TW-LL-msm8226/ramdisk_kmini3g" />
+  </project>
+
+</manifest>
