@@ -21,6 +21,6 @@
   <project path="s5_port_mm" name="TW-MM-msm8226/ROM" />
   <project path="kernel/msm8226" name="TW-MM-msm8226/samsung_ms013g_SWA" />
   <project path="ramdisk" name="TW-MM-msm8226/ramdisk_klte" />
-  <project path="tools/arm-eabi-4.8" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" groups="pdk,linux,arm" remote="aosp" />
+  <project path="tools/arm-linux-androideabi-4.9" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" groups="pdk,linux,arm" clone-depth="1" remote="aosp" />
   <project path="tools/mkbootimg" name="xiaolu/mkbootimg_tools" revision="master" remote="github" />
 </manifest>
