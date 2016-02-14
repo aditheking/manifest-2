@@ -7,7 +7,7 @@ Getting Started
 
 To initialize your local repository using the TW-MM-MSM8226 trees, use command :
 
-    repo init -u git://github.com/TW-MM-msm8226/manifest.git -b tw_mm
+    repo init -u git://github.com/TW-MM-msm8226/manifest.git -b TW-6.0.1
 
 Then to sync up:
 
