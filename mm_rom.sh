@@ -44,6 +44,11 @@ if [[ "$BUILD_COMMAND" == "ms01lte"* ]]; then		# MS01_LTE
 	VARIANT=${MODEL}_${CARRIER}
 	DTS_NAMES=msm8926-sec-ms01lteeur-r
 elif [[ "$BUILD_COMMAND" == "ms013g"* ]]; then		# MS01_3g
+	VARIANT=${MODEL}_${CARRIER}
+	DTS_NAMES=msm8226-sec-ms013geur-r
+elif [[ "$BUILD_COMMAND" == "s3ve3g"* ]]; then		# S3ve_3g
+	VARIANT=${MODEL}_${CARRIER}
+	DTS_NAMES=msm8226-sec-s3ve3geur-r
 elif [[ "$BUILD_COMMAND" == "milletlte_vzw"* ]]; then
 	VARIANT=${MODEL}_${CARRIER}
 DTS_NAMES=msm8926-sec-milletltevzw-r
