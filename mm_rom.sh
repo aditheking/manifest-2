@@ -5,7 +5,7 @@
 BUILD_TOP_DIR=$(pwd)
 BUILD_KERNEL_DIR=$(pwd)
 
-BUILD_CROSS_COMPILE=$(pwd)/tools/arm-eabi-4.8/bin/arm-eabi-
+BUILD_CROSS_COMPILE=$(pwd)/tools/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
 BUILD_JOB_NUMBER=`grep processor /proc/cpuinfo|wc -l`
 
 # Kernel default
